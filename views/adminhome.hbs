@@ -1,0 +1,48 @@
+<body
+  style="background-image:url(../images/ball.jpg);background-size: cover;color:white;"
+>
+  <div class="d-flex justify-content-end conatiner-fluid mb-3">
+    <a href="/admin/adminlogout"><button class="btn-danger">Logout</button></a>
+  </div>
+  <div class="mb-4">
+    <a href="/admin/create"><button class="btn-primary">Create</button></a>
+  </div>
+  <table class="table" style="color:white;" id="myTable">
+    <thead>
+      <tr>
+        <th scope="col">Full name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Category</th>
+        <th scope="col">Played league match</th>
+        <th scope="col">Favourite player</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each response}}
+        <tr>
+
+          <td scope="row">{{this.fullname}}</td>
+          <td>{{this.age}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.played}}</td>
+          <td>{{this.favcricketer}}</td>
+          <td>
+            <a href="/admin/edit/{{this._id}}"><button
+                class="btn-primary"
+              >Edit</button></a>
+            <a href="/admin/delete/{{this._id}}"><button
+                onclick="return confirm('Are you sure to delete {{this.fullname}} details')"
+                class="btn-danger"
+              >Delete</button></a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <script>
+    $(document).ready( function () { $('#myTable').DataTable({ }); } );
+  </script>
+
+</body>

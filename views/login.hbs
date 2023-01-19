@@ -1,0 +1,63 @@
+
+ <body style="background-image:url(../images/cric.jpg);background-size: cover;background-position: 10% 85% ; max-height:100vh;" class=" bg-white justify-content-cenetr align-items-center">
+<div class="text-center text-white " style="padding-top:90px;">
+      <h2 >t-20 bash User Login</h2>
+    </div>
+<form style="padding-left:40%;padding-top:4%;" class="ml-4 mt-5" action="/login" method="POST">
+    <!-- Email input -->
+    
+    <div class="form-outline mb-4 w-25 d-flex flex-column ">
+      <input type="email" id="name" name="email" class="form-control mb-2" />
+      <label style="color:white;" class="form-label" for="form2Example1">Email</label>
+      <p class="text-danger">{{msg}}</p>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4 w-25 d-flex flex-column">
+      <input type="password" id="text" name="password" class="form-control mb-2" />
+      <label style="color:white;" class="form-label" for="form2Example2">Password</label>
+      <p class="text-danger">{{message}}{{m}}{{loginErr}}</p>
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4 d-flex flex-row">
+      <div class="ml-3 ">
+        <!-- Checkbox -->
+        <div class="form-check d-flex flex-row">
+          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+          <label style="color:white;" class="form-check-label" for="form2Example31"> Remember me </label>
+        </div>
+      </div>
+  
+      <div class="ml-4">
+        <!-- Simple link -->
+        <a style="color:white;" href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4 " style="width:10%;" >Sign in</button>
+  
+    <!-- Register buttons -->
+    <div style="color:white;" class="">
+      <p >Not a member? <a style="color:white;" href="/signup">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button>
+    </div>
+  </form> 
+  <body>
+    

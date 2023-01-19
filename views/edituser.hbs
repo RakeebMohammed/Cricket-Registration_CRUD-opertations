@@ -1,0 +1,69 @@
+<body style="background-image:url(/images/piller.jpg);background-size: cover;">
+  <div class="d-flex justify-content-end conatiner-fluid mb-3">
+    <a href="/admin/adminlogout"><button
+        style="border-radius:10px;"
+        class="btn-danger"
+      >Logout</button></a>
+  </div>
+  <div class="text-center">
+    <h2>Edit Player</h2>
+  </div>
+  <form
+    style="width:50%;"
+    action="/admin/edituser/{{result._id}}"
+    method="POST"
+    class="d-flex flex-column"
+  >
+
+    <div class="d-flex flex-row p-3">
+      <h3 class="col-4" for="">Full name :</h3>
+      <input
+        type="text"
+        name="fullname"
+        value="{{result.fullname}}"
+        class="col-6"
+      />
+    </div>
+    <div class="d-flex flex-row p-3">
+      <h3 class="col-4" for="">Age :</h3>
+      <input class="col-6" type="number" value="{{result.age}}" name="age" />
+    </div>
+    <div class="d-flex flex-row p-3">
+      <h3 class="col-4" for="">Category :</h3>
+      <input
+        type="text"
+        name="category"
+        value="{{result.category}}"
+        class="col-4"
+      />
+    </div>
+
+    <div class="d-flex flex-row p-3">
+      <h3 class="ml-3">Ever played disrtict league :</h3>
+      <input
+        type="text"
+        name="played"
+        value="{{result.played}}"
+        class="col-4"
+      />
+    </div>
+    <div class="d-flex flex-row p-3">
+      <h3 class="col-5">Favourite cricker :</h3>
+      <input
+        class="col-4"
+        type="text"
+        value="{{result.favcricketer}}"
+        name="favcricketer"
+      />
+    </div>
+    <div class="text-center pt-3">
+      <a><button
+          style="height:40px;width:100px;border-radius:10px; "
+          type="submit"
+          class="btn-success"
+        >Edit</button>
+      </a>
+    </div>
+
+  </form>
+</body>
